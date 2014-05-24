@@ -1,0 +1,1 @@
+socket examples http://www.php.net/manual/en/sockets.examples.php

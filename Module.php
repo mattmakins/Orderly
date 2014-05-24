@@ -26,6 +26,9 @@ class Module
     {
         return array(
             'factories' => array(
+                'Orderly\Queue' => function(){            
+                    return new Queue();
+                }
             ),
         );
     }
