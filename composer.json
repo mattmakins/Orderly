@@ -1,0 +1,14 @@
+{
+    "name": "mattmakins/orderly",
+    "description": "ZF2 module for queueing background tasks",
+    "type": "library",
+    "version": "0.9",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Orderly": "src/"
+        }
+    }
+}
