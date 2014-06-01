@@ -1,11 +1,13 @@
 <?php
 namespace Orderly\Service;
 
+use Orderly\ConnectionFactoryInterface;
 use Orderly\QueueFactoryInterface;
 use Orderly\QueueInterface;
 use RuntimeException;
 
-class QueueService implements QueueFactoryInterface
+class QueueService implements QueueFactoryInterface, 
+    ConnectionFactoryInterface        
 {    
     /*
      * QueueFactoryInterface Implementation
@@ -15,14 +17,14 @@ class QueueService implements QueueFactoryInterface
      * @return QueueInterface
      * @throws RuntimeException
      */
-    public function getQueue() {
+    public function getQueue($name) {
         
         if(is_null($this->queueFactory)){
             throw new RuntimeException('queue factory cannot be null when'                    
                 . ' getting queue.');
         }
         
-        return $this->queueFactory->getQueue();
+        return $this->queueFactory->getQueue($name);
     }
     
     /**
@@ -34,4 +36,13 @@ class QueueService implements QueueFactoryInterface
     {
         $this->queueFactory = $qf;
     }
+
+    /*
+     * ConnectionFactoryInterface Implementation
+     */
+    
+    public function getConnection() {
+        
+    }
+
 }

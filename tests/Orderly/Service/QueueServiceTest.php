@@ -13,7 +13,7 @@ class QueueServiceTest extends \PHPUnit_Framework_TestCase
     public function testThrowsExceptionWhenGettingQueueIfQueueFactoryNotSet()
     {
         $qs = new QueueService();        
-        $qs->getQueue();
+        $qs->getQueue('queue-name');
     }
     
     public function testGetBeanstalkQueue()
@@ -22,6 +22,7 @@ class QueueServiceTest extends \PHPUnit_Framework_TestCase
         
         $qs->setQueueFactory(new BeanstalkQueueFactory());
                 
-        $this->assertInstanceOf('Orderly\Beanstalk\BeanstalkQueue', $qs->getQueue());
+        $this->assertInstanceOf('Orderly\Beanstalk\BeanstalkQueue', $qs->getQueue(
+            'queue-name'));
     }
 }

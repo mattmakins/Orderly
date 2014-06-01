@@ -10,5 +10,8 @@
         "psr-0": {
             "Orderly": "src/"
         }
+    },    
+    "require": {
+        "rackspace/php-opencloud": "1.9.*"
     }
 }

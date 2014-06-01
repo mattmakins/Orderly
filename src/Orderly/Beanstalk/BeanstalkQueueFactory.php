@@ -5,7 +5,12 @@ use Orderly\QueueFactoryInterface;
 
 class BeanstalkQueueFactory implements QueueFactoryInterface
 {
-    public function getQueue() {
-        return new BeanstalkQueue();
+    public function __construct() {
+        
+        
+    }
+    
+    public function getQueue($name) {
+        return new BeanstalkQueue(new BeanstalkSocketConnection());
     }
 }
