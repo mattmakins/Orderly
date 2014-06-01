@@ -5,10 +5,10 @@ class RackspaceQueueFactoryTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $config = $config = include __DIR__ . '/../../config/orderly.local.php';
+        $config = include __DIR__ . '/../../../config/orderly.local.php';
         
-        $rsqf = new RackspaceQueueFactory($config['username'], 
-            $config['api_key']);
+        $rsqf = new RackspaceQueueFactory($config['rackspace']['username'], 
+            $config['rackspace']['api_key']);
         
         $queue = $rsqf->getQueue('provider-bulk-course-add-queue');
         
