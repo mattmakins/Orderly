@@ -2,7 +2,7 @@
 namespace Orderly\Rackspace;
 
 use OpenCloud\Rackspace;
-use Orderly\QueueFactoryInterface;
+use Orderly\Queue\QueueFactoryInterface;
 
 class RackspaceQueueFactory implements QueueFactoryInterface
 {
