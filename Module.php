@@ -1,6 +1,8 @@
 <?php
 namespace Orderly;
 
+use Orderly\Service\QueueService;
+
 class Module
 {
     public function getAutoloaderConfig()
@@ -27,7 +29,7 @@ class Module
         return array(
             'factories' => array(
                 'Orderly\Service\QueueService' => function(){            
-                    return new Service\QueueService();
+                    return new QueueService();
                 }
             ),
         );
