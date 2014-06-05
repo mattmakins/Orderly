@@ -1,5 +1,5 @@
 <?php
-namespace Orderly;
+namespace Orderly\Queue;
 
 interface QueueFactoryInterface
 {

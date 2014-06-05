@@ -2,8 +2,8 @@
 namespace Orderly\Service;
 
 use Orderly\ConnectionFactoryInterface;
-use Orderly\QueueFactoryInterface;
-use Orderly\QueueInterface;
+use Orderly\Queue\QueueFactoryInterface;
+use Orderly\Queue\QueueInterface;
 use RuntimeException;
 
 class QueueService implements QueueFactoryInterface, 
