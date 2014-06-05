@@ -8,7 +8,7 @@ use RuntimeException;
 
 class QueueService implements QueueFactoryInterface, 
     ConnectionFactoryInterface        
-{    
+{
     /*
      * QueueFactoryInterface Implementation
      */
