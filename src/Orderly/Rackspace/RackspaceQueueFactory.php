@@ -17,6 +17,11 @@ class RackspaceQueueFactory implements QueueFactoryInterface
         $this->apiKey = $apiKey;
     }
     
+    /**
+     * 
+     * @param string $name
+     * @return OpenCloud\Queues\Resource\Queue
+     */
     public function getQueue($name) 
     {
         $client = new Rackspace(Rackspace::UK_IDENTITY_ENDPOINT, array(
