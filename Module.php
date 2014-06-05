@@ -27,7 +27,7 @@ class Module
         return array(
             'factories' => array(
                 'Orderly\Service\Queue' => function(){            
-                    return new Queue();
+                    return new Service\QueueService();
                 }
             ),
         );
