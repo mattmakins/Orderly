@@ -8,8 +8,11 @@
     },
     "autoload": {
         "psr-0": {
-            "ZF\\Queue\\": "src/"
-        }
+            "ZFQueue": "src/"
+        },
+        "classmap": [
+            "Module.php"
+        ]
     },    
     "require": {
         "rackspace/php-opencloud": "1.9.*"

@@ -1,5 +1,5 @@
 <?php
-namespace Orderly;
+namespace ZFQueue;
 
 use Orderly\Service\QueueService;
 
