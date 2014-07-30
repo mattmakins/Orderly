@@ -1,8 +1,6 @@
 <?php
 namespace ZFQueue;
 
-use Orderly\Service\QueueService;
-
 class Module
 {
     public function getAutoloaderConfig()
@@ -27,11 +25,7 @@ class Module
     public function getServiceConfig()
     {
         return array(
-            'factories' => array(
-                'Orderly\Service\QueueService' => function($sm){            
-                    return new QueueService();
-                }
-            ),
+
         );
     }
 }
