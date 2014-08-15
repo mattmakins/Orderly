@@ -1,5 +1,5 @@
 <?php
-namespace Orderly\Queue;
+namespace ZFQueue\Queue;
 
 interface QueueInterface
 {

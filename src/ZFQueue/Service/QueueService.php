@@ -1,9 +1,9 @@
 <?php
-namespace Orderly\Service;
+namespace ZFQueue\Service;
 
-use Orderly\ConnectionFactoryInterface;
-use Orderly\Queue\QueueFactoryInterface;
-use Orderly\Queue\QueueInterface;
+use ZFQueue\ConnectionFactoryInterface;
+use ZFQueue\Queue\QueueFactoryInterface;
+use ZFQueue\Queue\QueueInterface;
 use RuntimeException;
 
 class QueueService implements QueueFactoryInterface, 

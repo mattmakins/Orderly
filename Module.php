@@ -1,7 +1,7 @@
 <?php
-namespace Orderly;
+namespace ZFQueue;
 
-use Orderly\Service\QueueService;
+use ZFQueue\Service\QueueService;
 
 class Module
 {
@@ -28,7 +28,7 @@ class Module
     {
         return array(
             'factories' => array(
-                'Orderly\Service\QueueService' => function($sm){            
+                'ZFQueue\Service\QueueService' => function($sm){            
                     return new QueueService();
                 }
             ),

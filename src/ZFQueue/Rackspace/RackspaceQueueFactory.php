@@ -1,8 +1,8 @@
 <?php
-namespace Orderly\Rackspace;
+namespace ZFQueue\Rackspace;
 
 use OpenCloud\Rackspace;
-use Orderly\Queue\QueueFactoryInterface;
+use ZFQueue\Queue\QueueFactoryInterface;
 
 class RackspaceQueueFactory implements QueueFactoryInterface
 {
