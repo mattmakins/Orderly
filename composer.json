@@ -12,6 +12,6 @@
         }
     },    
     "require": {
-        "rackspace/php-opencloud": "1.9.*"
+        "rackspace/php-opencloud": "dev-master"
     }
 }

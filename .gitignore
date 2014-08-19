@@ -1,3 +1,4 @@
 /nbproject/private/
 vendor
 *.local.php
+composer.phar
