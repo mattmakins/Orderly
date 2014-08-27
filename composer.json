@@ -15,7 +15,7 @@
         {
             "type": "vcs",
             "url": "https://github.com/rackspace/php-opencloud.git"
-        },
+        }
     ],
     "require": {
         "rackspace/php-opencloud": "dev-master"
