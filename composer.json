@@ -1,4 +1,4 @@
-{
+{    
     "name": "mattmakins/zf-queue",
     "description": "ZF2 module for queueing background tasks",
     "type": "library",
@@ -11,6 +11,12 @@
             "ZFQueue": "src/"
         }
     },    
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rackspace/php-opencloud.git"
+        },
+    ],
     "require": {
         "rackspace/php-opencloud": "dev-master"
     }
