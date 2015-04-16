@@ -18,6 +18,7 @@
         }
     ],
     "require": {
-        "rackspace/php-opencloud": "dev-master"
+        "rackspace/php-opencloud": "dev-master",
+        "aws/aws-sdk-php": "2.*"
     }
 }

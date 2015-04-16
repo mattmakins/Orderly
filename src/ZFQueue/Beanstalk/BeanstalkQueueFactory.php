@@ -1,7 +1,7 @@
 <?php
-namespace Orderly\Beanstalk;
+namespace ZFQueue\Beanstalk;
 
-use Orderly\QueueFactoryInterface;
+use ZFQueue\Queue\QueueFactoryInterface;
 
 class BeanstalkQueueFactory implements QueueFactoryInterface
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Orderly\Beanstalk;
+namespace ZFQueue\Beanstalk;
 
-use Orderly\ConnectionFactoryInterface;
+use ZFQueue\ConnectionFactoryInterface;
 
 class BeanstalkSocketConnectionFactory implements ConnectionFactoryInterface
 {

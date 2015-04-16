@@ -1,11 +1,11 @@
 <?php
-namespace Orderly\Service;
+namespace ZFQueue\Service;
 
 use OpenCloud\Queues\Resource\Queue;
-use Orderly\Beanstalk\BeanstalkQueueFactory;
-use Orderly\Rackspace\RackspaceQueueFactory;
-use Orderly\Service\QueueService;
 use RuntimeException;
+use ZFQueue\Beanstalk\BeanstalkQueueFactory;
+use ZFQueue\Rackspace\RackspaceQueueFactory;
+use ZFQueue\Service\QueueService;
 
 class QueueServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,13 +16,13 @@ class QueueServiceTest extends \PHPUnit_Framework_TestCase
     
     public function setup()
     {
-        $config = include __DIR__ . '/../../../config/orderly.local.php';
+//        $config = include __DIR__ . '/../../../config/orderly.local.php';
         
-        $factory = new RackspaceQueueFactory(
-            $config['rackspace']['username'], $config['rackspace']['api_key']);
+//        $factory = new RackspaceQueueFactory(
+//            $config['rackspace']['username'], $config['rackspace']['api_key']);
         
-        $this->configuredRackspaceQueue = $factory->getQueue(
-            'provider-bulk-course-add-queue');
+//        $this->configuredRackspaceQueue = $factory->getQueue(
+//            'provider-bulk-course-add-queue');
     }    
     
     /**
@@ -30,7 +30,7 @@ class QueueServiceTest extends \PHPUnit_Framework_TestCase
      */
     public function testThrowsExceptionWhenGettingQueueIfQueueFactoryNotSet()
     {
-        $qs = new QueueService();        
+        $qs = new QueueService();
         $qs->getQueue('queue-name');
     }
     
@@ -40,12 +40,14 @@ class QueueServiceTest extends \PHPUnit_Framework_TestCase
         
         $qs->setQueueFactory(new BeanstalkQueueFactory());
                 
-        $this->assertInstanceOf('Orderly\Beanstalk\BeanstalkQueue', $qs->getQueue(
+        $this->assertInstanceOf('ZFQueue\Beanstalk\BeanstalkQueue', $qs->getQueue(
             'queue-name'));
     }
     
     public function testGetRackspaceQueue()
     {
+        $this->markTestIncomplete();
+        
         $qs = new QueueService();
         
         $config = include __DIR__ . '/../../../config/orderly.local.php';
@@ -59,6 +61,8 @@ class QueueServiceTest extends \PHPUnit_Framework_TestCase
     
     public function testAddToQueue()
     {
+        $this->markTestIncomplete();
+        
         $this->configuredRackspaceQueue->createMessage(array(
             'body' => (object) array(
                 'message' => 'test queue item',

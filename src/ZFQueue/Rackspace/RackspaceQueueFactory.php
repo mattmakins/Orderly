@@ -22,7 +22,7 @@ class RackspaceQueueFactory implements QueueFactoryInterface
      * @param string $name
      * @return OpenCloud\Queues\Resource\Queue
      */
-    public function getQueue($name) 
+    public function getQueue($name)
     {
         $client = new Rackspace(Rackspace::UK_IDENTITY_ENDPOINT, array(
             'username' => $this->username,
